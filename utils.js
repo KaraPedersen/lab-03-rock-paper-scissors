@@ -19,7 +19,7 @@ export function getRandomThrow() {
     return computerThrow;
 }
 
-export function userThrow(player, computer) {
+export function whoWon(player, computer) {
     if (player === computer) {
         return 'draw';
     }
