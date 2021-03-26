@@ -6,23 +6,17 @@ const resultsSpan = document.querySelector('#resultsSpan');
 const winSpan = document.querySelector('#win');
 const lossesSpan = document.querySelector('#loose');
 const drawsSpan = document.querySelector('#draw');
-
-console.log(buttonEl, resultsSpan, winSpan, lossesSpan, drawsSpan);
-
+const resetButton = document.querySelector('#reset');
 
 
 
+let wins = 0;
+let losses = 0;
+let draws = 0;
 
-// let wins = 0;
-// let losses = 0;
-// let draws = 0;
-// let total =0;
 
 // set event listeners to update state and DOM
 buttonEl.addEventListener('click', () => {
-    let wins = 0;
-    let losses = 0;
-    let draws = 0;
 
     const computerThrow = getRandomThrow();
     const currentlySelectedRadioButton = document.querySelector('input:checked');
@@ -47,7 +41,16 @@ buttonEl.addEventListener('click', () => {
         resultsSpan.textContent = 'it\'s a draw';
 
     }
+
 });
 
-//total++;
-// resetButton.addEventListener('click', 'reset');
+
+
+resetButton.addEventListener('click', () => {
+    wins = 0;
+    losses = 0;
+    draws = 0;
+    winSpan.textContent = wins;
+    lossesSpan.textContent = losses;
+    drawsSpan.textContent = draws;
+});
