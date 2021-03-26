@@ -19,6 +19,6 @@ test('who won', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected, actual2, expected2, actual3, expected3);
+    //     expect.equal(actual, expected, actual2, expected2, actual3, expected3);
 });
 
