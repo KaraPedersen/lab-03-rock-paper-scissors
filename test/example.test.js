@@ -1,7 +1,8 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-
+import { getRandomThrow } from '../utils.js'
 const test = QUnit.test;
+const whoWon = getRandomThrow;
 
 test('who won', (expect) => {
     const actual = whoWon('rock', 'paper');
