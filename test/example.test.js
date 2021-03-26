@@ -14,17 +14,34 @@ test('who won', (expect) => {
     const actualPaperRock = whoWon('paper', 'rock');
     const expectedPaperRock = 'win';
 
-    //Arrange
-    // Set up your arguments and expectations
-
-    //Act 
-    // Call the function you're testing and set the result to a const
-
-    //Expect
-    // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
     expect.equal(actual2, expected2);
     expect.equal(actual3, expected3);
     expect.equal(actualPaperRock, expectedPaperRock, 'paper rock');
+
+});
+
+test('a draw will happen when both things are equal', (expect) => {
+    const actual = whoWon('rock', 'rock');
+    const expected = 'draw';
+
+    expect.equal(actual, expected);
+
+});
+
+test('a win will happen when rock beats scissors', (expect) => {
+    const actual = whoWon('rock', 'scissors');
+    const expected = 'win';
+
+    expect.equal(actual, expected);
+
+});
+
+test('a loss will happen when scissors beats paper', (expect) => {
+    const actual = whoWon('paper', 'scissors');
+    const expected = 'loose';
+
+    expect.equal(actual, expected);
+
 });
 

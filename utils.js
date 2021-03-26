@@ -2,7 +2,7 @@
 //     // if (someNumber = )
 // }
 export function getRandomThrow() {
-    const getRandomThrow = Math.ceil(Math.random() * 3);
+    const getRandomThrow = Math.ceil(Math.random() * 3); + 1;
 
     let computerThrow;
 
@@ -12,7 +12,9 @@ export function getRandomThrow() {
 
     if (getRandomThrow === 2) {
         computerThrow = 'paper';
-    } else if (getRandomThrow === 3) {
+    }
+
+    if (getRandomThrow === 3) {
         computerThrow = 'scissors';
     }
 
@@ -43,6 +45,8 @@ export function whoWon(player, computer) {
     }
 
 }
+
+
 
 
 
