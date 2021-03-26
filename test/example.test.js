@@ -3,16 +3,21 @@
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('who won', (expect) => {
+    const actual = whoWon('rock', 'paper');
+    const expected = 'lost';
+    const actual2 = whoWon('rock', 'scissors');
+    const expected2 = 'win';
+    const actual3 = whoWon('rock', 'rock');
+    const expected3 = 'draw';
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = true;
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(actual, expected, actual2, expected2, actual3, expected3);
 });
+
