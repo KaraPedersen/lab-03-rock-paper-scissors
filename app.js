@@ -38,10 +38,11 @@ buttonEl.addEventListener('click', () => {
     if (gameResults === 'draws') {
         draws++;
         drawsSpan.textContent = draws;
+
         resultsSpan.textContent = 'it\'s a draw';
 
     }
-
+    console.log(draws);
 });
 
 

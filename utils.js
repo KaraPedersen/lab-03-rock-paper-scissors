@@ -23,7 +23,7 @@ export function getRandomThrow() {
 
 export function whoWon(player, computer) {
     if (player === computer) {
-        return 'draw';
+        return 'draws';
     }
     if (player === 'paper' && computer === 'rock') {
         return 'win';
