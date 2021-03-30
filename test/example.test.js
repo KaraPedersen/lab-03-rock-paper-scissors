@@ -10,7 +10,7 @@ test('who won', (expect) => {
     const actual2 = whoWon('rock', 'scissors');
     const expected2 = 'win';
     const actual3 = whoWon('rock', 'rock');
-    const expected3 = 'draw';
+    const expected3 = 'draws';
     const actualPaperRock = whoWon('paper', 'rock');
     const expectedPaperRock = 'win';
 
@@ -23,7 +23,7 @@ test('who won', (expect) => {
 
 test('a draw will happen when both things are equal', (expect) => {
     const actual = whoWon('rock', 'rock');
-    const expected = 'draw';
+    const expected = 'draws';
 
     expect.equal(actual, expected);
 
